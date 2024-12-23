@@ -93,7 +93,7 @@ const Hero = () => {
           <Pointer name="Ian" color="red" />
         </motion.div> */}
         <div className="flex justify-center">
-          <h3 className="tag">✨ $7.5M seed round raised</h3>
+          <h3 className="tag">✨ $120k seed round raised</h3>
         </div>
         <h1 className="text-6xl md:text-7xl lg:text-8xl font-medium text-center mt-6">
           SVG viewing should be simple

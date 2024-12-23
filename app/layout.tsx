@@ -14,8 +14,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'Modern Design Tool Landing Page',
-  description: 'A landing page for a SaaS product',
+  title: 'SVGFlow - Simple SVG Viewing and Inspection',
+  description:
+    'Tired of clunky SVG viewers? SVGFlow makes it effortless to open, inspect and navigate your SVG files with powerful zoom, pan and property inspection tools.',
 };
 
 export default function RootLayout({
