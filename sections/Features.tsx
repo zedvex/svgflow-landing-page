@@ -47,8 +47,8 @@ const Features = () => {
             </div>
           </FeatureCard>
           <FeatureCard
-            title="Real-time Collaboration"
-            description="Work together seamlessly with your team in real-time, seeing changes instantly"
+            title="SVG Property Inspector"
+            description="Inspect and understand SVG properties with a powerful built-in inspector that shows all attributes and values"
             className="md:col-span-2 lg:col-span-1 group"
           >
             <div className="aspect-video flex items-center justify-center">

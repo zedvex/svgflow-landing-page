@@ -140,15 +140,15 @@ export const FAQs = [
 
 export const FOOTER_LINKS = [
   {
-    href: '#',
+    href: '/contact',
     label: 'Contact',
   },
   {
-    href: '#',
+    href: '/privacy-policy',
     label: 'Privacy Policy',
   },
   {
-    href: '#',
+    href: '/terms-and-conditions',
     label: 'Terms & Conditions',
   },
 ];
