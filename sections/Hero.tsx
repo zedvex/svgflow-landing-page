@@ -119,14 +119,17 @@ const Hero = () => {
               onClick={() => setShowModal(true)}
               className="relative group cursor-pointer flex justify-center items-center"
             >
-              <Image
-                src="/assets/images/svgflow-interface-hd-v2.png"
-                alt="SVGFlow Interface"
-                width={600}
-                height={400}
-                quality={100}
-                className="rounded-lg shadow-lg hover:opacity-90 transition-opacity cursor-pointer"
-              />
+              <div className="relative">
+                <div className="absolute -inset-4 bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-600 opacity-20 blur-lg rounded-xl animate-gradient-x"></div>
+                <Image
+                  src="/assets/images/svgflow-interface-hd-v2.png"
+                  alt="SVGFlow Interface"
+                  width={600}
+                  height={400}
+                  quality={100}
+                  className="relative rounded-lg shadow-lg hover:opacity-90 transition-opacity cursor-pointer"
+                />
+              </div>
               <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-50 transition-opacity">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
