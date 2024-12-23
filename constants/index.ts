@@ -155,15 +155,15 @@ export const FOOTER_LINKS = [
 
 export const DOWNLOADS = {
   windows: {
-    version: 'v0.1.2',
+    version: 'v0.1.3',
     url: 'https://your-storage-url/SVGFlow-Setup-0.1.2.exe',
   },
   mac: {
-    version: 'v0.1.2',
+    version: 'v0.1.3',
     url: 'https://your-storage-url/SVGFlow-0.1.2.dmg',
   },
   linux: {
-    version: 'v0.1.2',
+    version: 'v0.1.3',
     url: 'https://your-storage-url/SVGFlow-0.1.2.AppImage',
   },
 };
