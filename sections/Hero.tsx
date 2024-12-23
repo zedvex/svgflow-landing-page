@@ -115,7 +115,10 @@ const Hero = () => {
         <div className="flex flex-col lg:flex-row items-center gap-8 mt-12">
           {/* Left side - Image */}
           <div className="flex-1">
-            <div onClick={() => setShowModal(true)}>
+            <div
+              onClick={() => setShowModal(true)}
+              className="relative group cursor-pointer flex justify-center items-center"
+            >
               <Image
                 src="/assets/images/svgflow-interface-hd-v2.png"
                 alt="SVGFlow Interface"
@@ -124,6 +127,17 @@ const Hero = () => {
                 quality={100}
                 className="rounded-lg shadow-lg hover:opacity-90 transition-opacity cursor-pointer"
               />
+              <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-50 transition-opacity">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="48"
+                  height="48"
+                  viewBox="0 0 24 24"
+                  fill="black"
+                >
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z" />
+                </svg>
+              </div>
             </div>
 
             {showModal && (

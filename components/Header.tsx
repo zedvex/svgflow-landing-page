@@ -125,7 +125,7 @@ const Header = () => {
                       >
                         <Btn
                           variant="ghost"
-                          className="px-4 text-sm flex items-center gap-2"
+                          className="px-4 text-sm flex items-center gap-2 hover:bg-white/10 transition-colors"
                           onClick={() => handleDownload('windows')}
                           disabled={downloading === 'windows'}
                         >
@@ -151,7 +151,7 @@ const Header = () => {
                         </Btn>
                         <Btn
                           variant="ghost"
-                          className="px-4 text-sm flex items-center gap-2"
+                          className="px-4 text-sm flex items-center gap-2 hover:bg-white/10 transition-colors"
                           onClick={() => handleDownload('mac')}
                           disabled={downloading === 'mac'}
                         >
@@ -177,7 +177,7 @@ const Header = () => {
                         </Btn>
                         <Btn
                           variant="ghost"
-                          className="px-4 text-sm flex items-center gap-2"
+                          className="px-4 text-sm flex items-center gap-2 hover:bg-white/10 transition-colors"
                           onClick={() => handleDownload('linux')}
                           disabled={downloading === 'linux'}
                         >
