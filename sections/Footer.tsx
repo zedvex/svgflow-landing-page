@@ -11,6 +11,9 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row items-center md:justify-between gap-6">
           <div>
             <Image src={logoImage} alt="logo" className="w-64" />
+            <p className="text-white/50 text-sm mt-2">
+              © {new Date().getFullYear()} SVGFlow. All rights reserved.
+            </p>
           </div>
           <div>
             <nav className="flex gap-6">
