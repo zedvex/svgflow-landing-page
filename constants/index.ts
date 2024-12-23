@@ -68,73 +68,73 @@ export const LOGOS = [
 ];
 
 export const FEATURES = [
-  'Asset Library',
-  'Code Preview',
-  'Flow Mode',
-  'Smart Sync',
-  'Auto Layout',
+  'Powerful Zoom',
+  'Pan Controls',
+  'Property Inspector',
+  'Quick Open',
+  'Easy Navigation',
   'Fast Search',
-  'Smart Guides',
+  'SVG Preview',
 ];
 
 export const INTEGRATIONS = [
   {
     name: 'Figma',
     icon: figmaIcon,
-    description: 'Figma is a collaborative interface design tool.',
+    description: 'Import SVGs directly from your Figma designs.',
   },
   {
     name: 'Notion',
     icon: notionIcon,
-    description: 'Notion is an all-in-one workspace for notes and docs.',
+    description: 'Organize and document your SVG assets in Notion.',
   },
   {
     name: 'Slack',
     icon: slackIcon,
-    description: 'Slack is a powerful team communication platform.',
+    description: 'Share SVGs instantly with your team via Slack.',
   },
   {
     name: 'Relume',
     icon: relumeIcon,
-    description: 'Relume is a no-code website builder and design system.',
+    description: 'Seamless SVG integration with Relume projects.',
   },
   {
     name: 'Framer',
     icon: framerIcon,
-    description: 'Framer is a professional website prototyping tool.',
+    description: 'View and edit SVGs for your Framer prototypes.',
   },
   {
     name: 'GitHub',
     icon: githubIcon,
-    description: 'GitHub is the leading platform for code collaboration.',
+    description: 'Version control your SVG assets with GitHub.',
   },
 ];
 
 export const FAQs = [
   {
-    question: 'How is Layers different from other design tools?',
+    question: 'How is SVGFlow different from other SVG viewers?',
     answer:
-      'Unlike traditional design tools, Layers prioritizes speed and simplicity without sacrificing power. Our intelligent interface adapts to your workflow, reducing clicks and keeping you in your creative flow.',
+      'Unlike traditional SVG viewers that feel clunky and outdated, SVGFlow focuses on simplicity and efficiency. Our modern interface makes it effortless to open, inspect and navigate your SVG files.',
   },
   {
-    question: 'Is there a learning curve?',
+    question: 'What are the main features?',
     answer:
-      'Layers is designed to feel intuitive from day one. Most designers are productive within hours, not weeks. We also provide interactive tutorials and comprehensive documentation to help you get started.',
+      'SVGFlow comes with powerful zoom capabilities, intuitive pan controls, and detailed property inspection tools. You can easily navigate complex SVGs and inspect every element with precision.',
   },
   {
-    question: 'How do you handle version control?',
+    question: 'Can I use SVGFlow offline?',
     answer:
-      'Every change in Layers is automatically saved and versioned. You can review history, restore previous versions, and create named versions for important milestones.',
+      'Yes! SVGFlow works completely offline. You can view and inspect your SVG files anywhere, anytime, without needing an internet connection.',
   },
   {
-    question: 'Can I work offline?',
+    question: 'Does SVGFlow support all SVG features?',
     answer:
-      "Yes! Layers includes a robust offline mode. Changes sync automatically when you're back online, so you can keep working anywhere.",
+      "SVGFlow supports all standard SVG features and specifications. Whether you're working with simple icons or complex illustrations, SVGFlow handles them all seamlessly.",
   },
   {
-    question: 'How does Layers handle collaboration?',
+    question: 'How does SVGFlow handle large SVG files?',
     answer:
-      'Layers is built for collaboration. You can invite team members to your projects, share feedback, and work together in real-time.',
+      'SVGFlow is optimized for performance, handling even the largest SVG files with ease. Our efficient rendering engine ensures smooth zooming and panning regardless of file size.',
   },
 ];
 

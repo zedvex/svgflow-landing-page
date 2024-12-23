@@ -1,14 +1,14 @@
-import Image from 'next/image';
+// import Image from 'next/image';
 
-import Avatar from '@/components/Avatar';
+// import Avatar from '@/components/Avatar';
 import FeatureCard from '@/components/FeatureCard';
-import Key from '@/components/Key';
+// import Key from '@/components/Key';
 import Tag from '@/components/Tag';
 import { FEATURES } from '@/constants';
-import avatar1 from '@/public/assets/images/avatar-ashwin-santiago.jpg';
-import avatar3 from '@/public/assets/images/avatar-florence-shaw.jpg';
-import avatar2 from '@/public/assets/images/avatar-lula-meyers.jpg';
-import avatar4 from '@/public/assets/images/avatar-owen-garcia.jpg';
+// import avatar1 from '@/public/assets/images/avatar-ashwin-santiago.jpg';
+// import avatar3 from '@/public/assets/images/avatar-florence-shaw.jpg';
+// import avatar2 from '@/public/assets/images/avatar-lula-meyers.jpg';
+// import avatar4 from '@/public/assets/images/avatar-owen-garcia.jpg';
 
 const Features = () => {
   return (
@@ -18,44 +18,37 @@ const Features = () => {
           <Tag>Features</Tag>
         </div>
         <h2 className="text-6xl font-medium text-center mt-6 max-w-2xl mx-auto">
-          Where power meets <span className="text-lime-400">simplicity</span>
+          Where power meets <span className="text-[#29abe2]">simplicity</span>
         </h2>
         <div className="mt-12 grid grid-cols-1 md:grid-cols-4 lg:grid-cols-3 gap-8">
           <FeatureCard
-            title="Real-time Collaboration"
-            description="Work together seamlessly with conflict-free team editing"
+            title="Effortless SVG Viewing"
+            description="Open, inspect and navigate your SVG files with powerful zoom, pan and property inspection tools"
             className="md:col-span-2 lg:col-span-1 group"
           >
             <div className="aspect-video flex items-center justify-center">
-              <Avatar className="z-40">
-                <Image src={avatar1} alt="avatar 1" className="rounded-full" />
-              </Avatar>
-              <Avatar className="-ml-6 border-indigo-500 z-30">
-                <Image src={avatar2} alt="avatar 2" className="rounded-full" />
-              </Avatar>
-              <Avatar className="-ml-6 border-amber-500 z-20">
-                <Image src={avatar3} alt="avatar 3" className="rounded-full" />
-              </Avatar>
-              <Avatar className="-ml-6 border-transparent group-hover:border-green-500 transition">
-                <div className="size-full bg-neutral-700 rounded-full inline-flex items-center justify-center gap-1 relative">
-                  <Image
-                    src={avatar4}
-                    alt="avatar 4"
-                    className="absolute size-full rounded-full opacity-0 group-hover:opacity-100 transition"
-                  />
-                  {Array.from({ length: 3 }).map((_, i) => (
-                    <span
-                      className="size-1.5 rounded-full bg-white inline-flex"
-                      key={i}
-                    ></span>
-                  ))}
+              <div className="relative w-full h-full flex items-center justify-center">
+                <svg
+                  viewBox="0 0 100 100"
+                  className="w-24 h-24 absolute transition-all duration-500 group-hover:scale-150 group-hover:translate-x-12 group-hover:-translate-y-8"
+                >
+                  <circle cx="50" cy="50" r="40" fill="#29abe2" />
+                </svg>
+                <svg
+                  viewBox="0 0 100 100"
+                  className="w-16 h-16 absolute transition-all duration-500 group-hover:scale-75 group-hover:-translate-x-12 group-hover:translate-y-8"
+                >
+                  <rect x="20" y="20" width="60" height="60" fill="#29abe2" />
+                </svg>
+                <div className="absolute bottom-4 right-4 bg-neutral-800 px-3 py-1 rounded-full text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                  200%
                 </div>
-              </Avatar>
+              </div>
             </div>
           </FeatureCard>
           <FeatureCard
-            title="Interactive Prototyping"
-            description="Engage your clients with prototypes that react to user actions"
+            title="Real-time Collaboration"
+            description="Work together seamlessly with your team in real-time, seeing changes instantly"
             className="md:col-span-2 lg:col-span-1 group"
           >
             <div className="aspect-video flex items-center justify-center">
@@ -77,20 +70,32 @@ const Features = () => {
             </div>
           </FeatureCard>
           <FeatureCard
-            title="Keyboard Quick Actions"
-            description="Powerful commands to help you create designs more quickly"
+            title="Easy SVG Navigation"
+            description="Effortlessly zoom, pan and select elements with intuitive controls designed for exploring complex SVG files"
             className="md:col-span-2 md:col-start-2 lg:col-span-1 group"
           >
-            <div className="aspect-video flex items-center justify-center gap-4">
-              <Key className="w-28 outline outline-2 outline-offset-4 outline-transparent group-hover:outline-lime-400 transition-all duration-500 group-hover:translate-y-1">
-                shift
-              </Key>
-              <Key className="outline outline-2 outline-offset-4 outline-transparent group-hover:outline-lime-400 transition-all duration-150 group-hover:translate-y-1">
-                alt
-              </Key>
-              <Key className="outline outline-2 outline-offset-4 outline-transparent group-hover:outline-lime-400 transition-all duration-300 group-hover:translate-y-1">
-                c
-              </Key>
+            <div className="aspect-video flex items-center justify-center">
+              <div className="relative w-full h-full flex items-center justify-center">
+                <svg
+                  viewBox="0 0 100 100"
+                  className="w-32 h-32 absolute transition-all duration-500 group-hover:scale-125 group-hover:translate-x-8"
+                >
+                  <rect
+                    x="20"
+                    y="20"
+                    width="60"
+                    height="60"
+                    fill="#29abe2"
+                    className="group-hover:stroke-white/50 group-hover:stroke-2 transition-all duration-500"
+                  />
+                </svg>
+                <div className="absolute bottom-4 right-4 bg-neutral-800 px-3 py-1 rounded-full text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                  125%
+                </div>
+                <div className="absolute top-4 left-4 bg-neutral-800 px-3 py-1 rounded-full text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                  Selected: rect
+                </div>
+              </div>
             </div>
           </FeatureCard>
         </div>
@@ -100,7 +105,7 @@ const Features = () => {
               key={feature}
               className="bg-neutral-900 border border-white/10 inline-flex px-3 md:px-5 py-1.5 md:py-2 rounded-2xl gap-3 items-center hover:scale-105 transition duration-500 group"
             >
-              <span className="bg-lime-400 text-neutral-950 size-5 rounded-full inline-flex items-center justify-center text-xl group-hover:rotate-45 transition duration-500">
+              <span className="bg-[#29abe2] text-neutral-950 size-5 rounded-full inline-flex items-center justify-center text-xl group-hover:rotate-45 transition duration-500">
                 &#10038;
               </span>
               <span className="font-medium md:text-lg">{feature}</span>

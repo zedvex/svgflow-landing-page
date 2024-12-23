@@ -21,9 +21,15 @@ const Header = () => {
             <div className="flex justify-between items-center p-2 md:px-2">
               <Link
                 href="/"
-                className="relative h-9 md:h-12 w-32 md:w-44 md:-ml-2"
+                className="relative h-9 md:h-12 w-42 md:w-44 md:-ml-2"
               >
-                <Image src="/assets/images/logo.svg" alt="logo" fill />
+                <Image
+                  src="/assets/images/SVGFlow-logo-transparent.png"
+                  alt="logo"
+                  fill
+                  className="ml-4"
+                  style={{ objectFit: 'contain' }}
+                />
               </Link>
               <nav className="hidden lg:inline-flex">
                 <ul className="flex items-center gap-8">
@@ -77,17 +83,17 @@ const Header = () => {
                   ></line>
                 </svg>
 
-                <Btn
+                {/* <Btn
                   variant="outline"
                   className="border border-white/40 px-7 font-normal"
                 >
                   Log In
-                </Btn>
+                </Btn> */}
                 <Btn
                   variant="default"
-                  className="font-bold px-6 bg-primary bg-lime-500 text-slate-800"
+                  className="font-bold px-6 bg-primary bg-[#29abe2] text-slate-800"
                 >
-                  Sign Up
+                  Download
                 </Btn>
               </div>
             </div>
@@ -106,11 +112,11 @@ const Header = () => {
                   ))}
 
                   <div className="py-2 flex flex-col gap-2">
-                    <Btn variant="outline" className="block">
+                    {/* <Btn variant="outline" className="block">
                       Log In
-                    </Btn>
-                    <Btn className="block bg-lime-500 text-slate-800 font-bold">
-                      Sign Up
+                    </Btn> */}
+                    <Btn className="block bg-[#29abe2] text-slate-800 font-bold">
+                      Download
                     </Btn>
                   </div>
                 </motion.div>

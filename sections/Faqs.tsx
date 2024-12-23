@@ -18,7 +18,7 @@ const Faqs = () => {
         </div>
         <h2 className="text-6xl font-medium mt-6 text-center max-w-xl mx-auto">
           Questions? We&apos;ve got{' '}
-          <span className="text-lime-400">answers</span>
+          <span className="text-[#29abe2]">answers</span>
         </h2>
         <div className="mt-12 flex flex-col gap-6 max-w-xl mx-auto">
           {FAQs.map((faq, faqIndex) => (
@@ -42,7 +42,7 @@ const Faqs = () => {
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   className={cn(
-                    'feather feather-plus text-lime-400 flex-shrink-0 transition duration-300',
+                    'feather feather-plus text-[#29abe2] flex-shrink-0 transition duration-300',
                     selectedIndex === faqIndex && 'rotate-45',
                   )}
                 >
