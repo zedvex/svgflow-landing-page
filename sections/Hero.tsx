@@ -141,7 +141,8 @@ const Hero = () => {
                     className="rounded-lg max-h-[90vh] w-auto"
                   />
                   <button
-                    className="absolute top-4 right-4 text-white bg-black bg-opacity-50 rounded-full p-2 hover:bg-opacity-75"
+                    type="button"
+                    className="absolute top-4 right-4 text-white bg-black bg-opacity-75 rounded-full px-3 py-1.5 hover:bg-opacity-90 text-xl font-bold shadow-lg border-2 border-white/50 hover:border-white transition-all"
                     onClick={() => setShowModal(false)}
                   >
                     ✕
