@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 
-import { NAV_LINKS } from '@/constants';
+import { DOWNLOADS, NAV_LINKS } from '@/constants';
 import { cn } from '@/lib/utils';
 
 import Btn from './Btn';
@@ -13,6 +13,36 @@ import Btn from './Btn';
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [showDownloadOptions, setShowDownloadOptions] = useState(false);
+  const [downloading, setDownloading] = useState<string | null>(null);
+
+  const handleDownload = async (platform: 'windows' | 'mac' | 'linux') => {
+    try {
+      setDownloading(platform);
+      const download = DOWNLOADS[platform];
+
+      if (!download?.url) {
+        throw new Error(`Download URL not found for ${platform}`);
+      }
+
+      const response = await fetch(download.url, { method: 'HEAD' });
+      if (!response.ok) {
+        throw new Error('Download file not found');
+      }
+
+      const link = document.createElement('a');
+      link.href = download.url;
+      link.download = `SVGFlow-${download.version}-${platform}`;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+
+      setShowDownloadOptions(false);
+    } catch (error) {
+      console.error('Download failed:', error);
+    } finally {
+      setDownloading(null);
+    }
+  };
 
   return (
     <>
@@ -93,26 +123,89 @@ const Header = () => {
                         exit={{ width: 0, opacity: 0 }}
                         className="flex gap-2 overflow-hidden"
                       >
-                        <Btn variant="ghost" className="px-4 text-sm">
-                          Windows
+                        <Btn
+                          variant="ghost"
+                          className="px-4 text-sm flex items-center gap-2"
+                          onClick={() => handleDownload('windows')}
+                          disabled={downloading === 'windows'}
+                        >
+                          {downloading === 'windows' ? (
+                            <div className="animate-spin">↻</div>
+                          ) : (
+                            <>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                fill="currentColor"
+                              >
+                                <path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801" />
+                              </svg>
+                              Windows
+                              <span className="text-xs text-gray-400">
+                                {DOWNLOADS.windows.version}
+                              </span>
+                            </>
+                          )}
                         </Btn>
-                        <Btn variant="ghost" className="px-4 text-sm">
-                          Mac
+                        <Btn
+                          variant="ghost"
+                          className="px-4 text-sm flex items-center gap-2"
+                          onClick={() => handleDownload('mac')}
+                          disabled={downloading === 'mac'}
+                        >
+                          {downloading === 'mac' ? (
+                            <div className="animate-spin">↻</div>
+                          ) : (
+                            <>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                fill="currentColor"
+                              >
+                                <path d="M22 17.607c-.786 2.28-3.139 6.317-5.563 6.361-1.608.031-2.125-.953-3.963-.953-1.837 0-2.412.923-3.932.983-2.572.099-6.542-5.827-6.542-10.995 0-4.747 3.308-7.1 6.198-7.143 1.55-.028 3.014 1.045 3.959 1.045.949 0 2.727-1.29 4.596-1.101.782.033 2.979.315 4.389 2.377-3.741 2.442-3.158 7.549.858 9.426zm-5.222-17.607c-2.826.114-5.132 3.079-4.81 5.531 2.612.203 5.118-2.725 4.81-5.531z" />
+                              </svg>
+                              Mac
+                              <span className="text-xs text-gray-400">
+                                {DOWNLOADS.mac.version}
+                              </span>
+                            </>
+                          )}
                         </Btn>
-                        <Btn variant="ghost" className="px-4 text-sm">
-                          Linux
+                        <Btn
+                          variant="ghost"
+                          className="px-4 text-sm flex items-center gap-2"
+                          onClick={() => handleDownload('linux')}
+                          disabled={downloading === 'linux'}
+                        >
+                          {downloading === 'linux' ? (
+                            <div className="animate-spin">↻</div>
+                          ) : (
+                            <>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                fill="currentColor"
+                              >
+                                <path d="M20.581 19.049c-.55-.446-.336-1.431-.907-1.917.553-3.365-.997-6.331-2.845-8.232-1.551-1.595-1.051-3.147-1.051-4.49 0-2.146-.881-4.41-3.55-4.41-2.853 0-3.635 2.38-3.663 3.738-.068 3.262.659 4.11-1.25 6.484-2.246 2.793-2.577 5.579-2.07 7.057-.237.276-.557.582-1.155.835-1.652.72-.441 1.925-.898 2.78-.13.243-.192.497-.192.74 0 .75.596 1.399 1.679 1.302 1.461-.13 2.809.905 3.681.905.77 0 1.402-.438 1.696-1.041 1.377-.339 3.077-.296 4.453.059.247.691.917 1.141 1.662 1.141 1.631 0 1.945-1.849 3.816-2.475.674-.225 1.013-.879 1.013-1.488 0-.39-.139-.761-.419-.988zm-9.147-10.465c-.319 0-.583-.258-1-.568-.528-.392-1.065-.618-1.059-1.03 0-.283.379-.37.869-.681.526-.333.731-.671 1.249-.671.53 0 .69.268 1.41.579.708.307 1.201.427 1.201.773 0 .355-.741.609-1.158.868-.613.378-.928.73-1.512.73z" />
+                              </svg>
+                              Linux
+                              <span className="text-xs text-gray-400">
+                                {DOWNLOADS.linux.version}
+                              </span>
+                            </>
+                          )}
                         </Btn>
                       </motion.div>
                     )}
                   </AnimatePresence>
                 </div>
 
-                {/* <Btn
-                  variant="outline"
-                  className="border border-white/40 px-7 font-normal"
-                >
-                  Log In
-                </Btn> */}
                 <Btn
                   variant="default"
                   className="font-bold px-6 bg-primary bg-[#29abe2] text-slate-800"
