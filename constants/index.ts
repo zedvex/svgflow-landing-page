@@ -22,10 +22,10 @@ export const NAV_LINKS = [
     label: 'Features',
     href: '#features',
   },
-  {
-    label: 'Integrations',
-    href: '#integrations',
-  },
+  // {
+  //   label: 'Integrations',
+  //   href: '#integrations',
+  // },
   {
     label: 'FAQs',
     href: '#faqs',

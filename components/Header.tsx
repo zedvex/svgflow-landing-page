@@ -12,6 +12,7 @@ import Btn from './Btn';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [showDownloadOptions, setShowDownloadOptions] = useState(false);
 
   return (
     <>
@@ -31,7 +32,7 @@ const Header = () => {
                   style={{ objectFit: 'contain' }}
                 />
               </Link>
-              <nav className="hidden lg:inline-flex">
+              <nav className="hidden lg:flex flex-1 justify-center">
                 <ul className="flex items-center gap-8">
                   {NAV_LINKS.map((link) => (
                     <li key={link.label}>
@@ -83,6 +84,27 @@ const Header = () => {
                   ></line>
                 </svg>
 
+                <div className="hidden md:flex gap-2 items-center">
+                  <AnimatePresence>
+                    <motion.div
+                      initial={{ width: 0, opacity: 0 }}
+                      animate={{ width: 'auto', opacity: 1 }}
+                      exit={{ width: 0, opacity: 0 }}
+                      className="flex gap-2 overflow-hidden"
+                    >
+                      <Btn variant="ghost" className="px-4 text-sm">
+                        Windows
+                      </Btn>
+                      <Btn variant="ghost" className="px-4 text-sm">
+                        Mac
+                      </Btn>
+                      <Btn variant="ghost" className="px-4 text-sm">
+                        Linux
+                      </Btn>
+                    </motion.div>
+                  </AnimatePresence>
+                </div>
+
                 {/* <Btn
                   variant="outline"
                   className="border border-white/40 px-7 font-normal"
@@ -92,6 +114,9 @@ const Header = () => {
                 <Btn
                   variant="default"
                   className="font-bold px-6 bg-primary bg-[#29abe2] text-slate-800"
+                  onMouseEnter={() => setShowDownloadOptions(true)}
+                  onMouseLeave={() => setShowDownloadOptions(false)}
+                  onClick={() => setShowDownloadOptions(!showDownloadOptions)}
                 >
                   Download
                 </Btn>
