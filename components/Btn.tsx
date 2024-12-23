@@ -2,13 +2,29 @@ import { cn } from '@/lib/utils';
 
 import { Button } from './ui/button';
 
-type BtnProps = React.ComponentProps<typeof Button>;
+type BtnProps = React.ComponentProps<typeof Button> & {
+  onMouseEnter?: () => void;
+  onMouseLeave?: () => void;
+  onClick?: () => void;
+};
 
-const Btn = ({ children, variant, className }: BtnProps) => {
+const Btn = ({
+  children,
+  variant,
+  className,
+  onMouseEnter,
+  onMouseLeave,
+  onClick,
+  ...props
+}: BtnProps) => {
   return (
     <Button
       variant={variant}
-      className={cn('hidden md:block rounded-full h-12 text-base ', className)}
+      className={cn('rounded-full h-12 text-base', className)}
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
+      onClick={onClick}
+      {...props}
     >
       {children}
     </Button>

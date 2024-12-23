@@ -86,22 +86,24 @@ const Header = () => {
 
                 <div className="hidden md:flex gap-2 items-center">
                   <AnimatePresence>
-                    <motion.div
-                      initial={{ width: 0, opacity: 0 }}
-                      animate={{ width: 'auto', opacity: 1 }}
-                      exit={{ width: 0, opacity: 0 }}
-                      className="flex gap-2 overflow-hidden"
-                    >
-                      <Btn variant="ghost" className="px-4 text-sm">
-                        Windows
-                      </Btn>
-                      <Btn variant="ghost" className="px-4 text-sm">
-                        Mac
-                      </Btn>
-                      <Btn variant="ghost" className="px-4 text-sm">
-                        Linux
-                      </Btn>
-                    </motion.div>
+                    {showDownloadOptions && (
+                      <motion.div
+                        initial={{ width: 0, opacity: 0 }}
+                        animate={{ width: 'auto', opacity: 1 }}
+                        exit={{ width: 0, opacity: 0 }}
+                        className="flex gap-2 overflow-hidden"
+                      >
+                        <Btn variant="ghost" className="px-4 text-sm">
+                          Windows
+                        </Btn>
+                        <Btn variant="ghost" className="px-4 text-sm">
+                          Mac
+                        </Btn>
+                        <Btn variant="ghost" className="px-4 text-sm">
+                          Linux
+                        </Btn>
+                      </motion.div>
+                    )}
                   </AnimatePresence>
                 </div>
 
@@ -114,8 +116,6 @@ const Header = () => {
                 <Btn
                   variant="default"
                   className="font-bold px-6 bg-primary bg-[#29abe2] text-slate-800"
-                  onMouseEnter={() => setShowDownloadOptions(true)}
-                  onMouseLeave={() => setShowDownloadOptions(false)}
                   onClick={() => setShowDownloadOptions(!showDownloadOptions)}
                 >
                   Download
