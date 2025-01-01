@@ -1,9 +1,9 @@
 import './globals.css';
 
-import { Analytics } from '@vercel/analytics/react';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 
+import GoogleAnalytics from '@/components/GoogleAnalytics';
 import { ThemeProvider } from '@/components/theme-provider';
 import { cn } from '@/lib/utils';
 
@@ -31,7 +31,7 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="dark">
           {children}
         </ThemeProvider>
-        <Analytics />
+        <GoogleAnalytics />
       </body>
     </html>
   );
