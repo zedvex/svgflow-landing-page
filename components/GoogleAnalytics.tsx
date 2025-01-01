@@ -2,6 +2,10 @@
 
 import { useEffect } from 'react';
 
+// Define proper types for Google Analytics
+type GtagCommand = 'js' | 'config' | 'event';
+type GtagArg = Date | string | object;
+
 const GoogleAnalytics = () => {
   useEffect(() => {
     // Add the GA4 script tag dynamically
@@ -14,10 +18,9 @@ const GoogleAnalytics = () => {
     script.onload = () => {
       window.dataLayer = window.dataLayer || [];
 
-      // Define the gtag function with a more specific type
-      type GtagArgs = [string, string, Record<string, unknown>];
-      const gtag = (...args: GtagArgs) => {
-        window.dataLayer.push(args);
+      // Define the gtag function with proper types
+      const gtag = (command: GtagCommand, ...args: GtagArg[]) => {
+        window.dataLayer.push([command, ...args]);
       };
 
       // Make gtag globally available
@@ -25,7 +28,7 @@ const GoogleAnalytics = () => {
 
       // Configure GA4 with your Measurement ID
       gtag('js', new Date());
-      gtag('config', 'G-JJGD1XYQNP');
+      gtag('config', 'G-JJGD1XYQNP', { page_path: window.location.pathname });
     };
 
     return () => {
