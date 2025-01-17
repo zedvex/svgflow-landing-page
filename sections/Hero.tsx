@@ -122,7 +122,7 @@ const Hero = () => {
               <div className="relative">
                 <div className="absolute -inset-4 bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-600 opacity-20 blur-lg rounded-xl animate-gradient-x"></div>
                 <Image
-                  src="/assets/images/svgflow-interface-hd-v3.png"
+                  src="/assets/images/svgflow-interface-new.png"
                   alt="SVGFlow Interface"
                   width={600}
                   height={400}
@@ -150,7 +150,7 @@ const Hero = () => {
               >
                 <div className="relative" onClick={(e) => e.stopPropagation()}>
                   <Image
-                    src="/assets/images/svgflow-interface-hd-v3.png"
+                    src="/assets/images/svgflow-interface-new-large.png"
                     alt="SVGFlow Interface"
                     width={1200}
                     height={800}
