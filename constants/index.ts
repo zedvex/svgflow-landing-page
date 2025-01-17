@@ -27,12 +27,12 @@ export const NAV_LINKS = [
     href: '/version-history',
   },
   {
-    label: 'Contact',
-    href: '/contact',
-  },
-  {
     label: 'FAQs',
     href: '/#faqs',
+  },
+  {
+    label: 'Contact',
+    href: '/contact',
   },
 ];
 
