@@ -23,10 +23,6 @@ export const NAV_LINKS = [
     href: '/#features',
   },
   {
-    label: 'Version History',
-    href: '/version-history',
-  },
-  {
     label: 'FAQs',
     href: '/#faqs',
   },
@@ -146,6 +142,10 @@ export const FOOTER_LINKS = [
   {
     href: '/contact',
     label: 'Contact',
+  },
+  {
+    label: 'Version History',
+    href: '/version-history',
   },
   {
     href: '/privacy-policy',
