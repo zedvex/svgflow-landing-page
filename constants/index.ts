@@ -23,10 +23,6 @@ export const NAV_LINKS = [
     href: '/#features',
   },
   {
-    label: 'Integrations',
-    href: '/#integrations',
-  },
-  {
     label: 'Version History',
     href: '/version-history',
   },
@@ -36,7 +32,7 @@ export const NAV_LINKS = [
   },
   {
     label: 'FAQs',
-    href: '#faqs',
+    href: '/#faqs',
   },
 ];
 
