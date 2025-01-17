@@ -20,12 +20,20 @@ export const NAV_LINKS = [
   },
   {
     label: 'Features',
-    href: '#features',
+    href: '/#features',
   },
-  // {
-  //   label: 'Integrations',
-  //   href: '#integrations',
-  // },
+  {
+    label: 'Integrations',
+    href: '/#integrations',
+  },
+  {
+    label: 'Version History',
+    href: '/version-history',
+  },
+  {
+    label: 'Contact',
+    href: '/contact',
+  },
   {
     label: 'FAQs',
     href: '#faqs',
