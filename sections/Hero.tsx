@@ -99,7 +99,7 @@ const Hero = () => {
         </motion.div> */}
 
         <div className="flex justify-center">
-          <h3 className="tag">✨ $120k seed round raised</h3>
+          <h3 className="tag">✨ we make it easy</h3>
         </div>
 
         <h1 className="text-6xl md:text-7xl lg:text-8xl font-medium text-center mt-6">
@@ -230,7 +230,7 @@ const Hero = () => {
               </div>
 
               <p className="text-sm text-gray-400">
-                {/* Add download count */} 1,647 downloads so far
+                {/* Add download count */} 1,267 downloads so far
               </p>
             </div>
           </div>
