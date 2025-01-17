@@ -95,26 +95,29 @@ export default function ContactPage() {
               </div>
             </form>
           </div>
-          <div className="bg-gray-900 p-8 rounded-lg">
-            <h2 className="text-2xl font-semibold mb-4">About SVGFlow</h2>
-            <div className="space-y-4">
-              <p>
-                SVGFlow is a modern SVG viewer and manager designed to make
-                working with SVG files simple and efficient. Our tool helps
-                designers and developers seamlessly handle SVG assets with
-                features like:
-              </p>
-              <ul className="list-disc pl-6 space-y-2">
-                <li>Powerful zoom capabilities</li>
-                <li>Intuitive pan controls</li>
-                <li>Detailed property inspection</li>
-                <li>Offline support</li>
-                <li>Large file handling</li>
-              </ul>
-              <p>
-                Whether you&apos;re working on simple icons or complex
-                illustrations, SVGFlow is here to streamline your workflow.
-              </p>
+          <div className="relative flex">
+            <div className="absolute -inset-3 bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-600 opacity-20 blur-lg rounded-xl animate-gradient-x" />
+            <div className="relative bg-gray-900 p-8 rounded-lg">
+              <h2 className="text-2xl font-semibold mb-4">About SVGFlow</h2>
+              <div className="space-y-4">
+                <p>
+                  SVGFlow is a modern SVG viewer and manager designed to make
+                  working with SVG files simple and efficient. Our tool helps
+                  designers and developers seamlessly handle SVG assets with
+                  features like:
+                </p>
+                <ul className="list-disc pl-6 space-y-2">
+                  <li>Powerful zoom capabilities</li>
+                  <li>Intuitive pan controls</li>
+                  <li>Detailed property inspection</li>
+                  <li>Offline support</li>
+                  <li>Large file handling</li>
+                </ul>
+                <p>
+                  Whether you&apos;re working on simple icons or complex
+                  illustrations, SVGFlow is here to streamline your workflow.
+                </p>
+              </div>
             </div>
           </div>
         </div>

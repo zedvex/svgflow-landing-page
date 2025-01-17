@@ -18,7 +18,7 @@ interface Release {
 const releases: Release[] = [
   {
     version: '0.1.5',
-    date: '2024-03-15',
+    date: '2025-01-17',
     type: 'patch',
     changes: [
       {
@@ -49,7 +49,7 @@ const releases: Release[] = [
   },
   {
     version: '0.1.4',
-    date: '2024-03-01',
+    date: '2025-12-17',
     type: 'patch',
     changes: [
       {
@@ -76,7 +76,7 @@ const releases: Release[] = [
   },
   {
     version: '0.1.3',
-    date: '2024-02-15',
+    date: '2025-11-03',
     type: 'patch',
     changes: [
       {
