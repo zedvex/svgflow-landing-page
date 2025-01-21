@@ -30,20 +30,20 @@ const releases: Release[] = [
         description: 'Smooth zoom and pan for better SVG viewing experience',
       },
       {
-        type: 'new',
-        description: 'Element inspection with color values and dimensions',
+        type: 'fixed',
+        description: 'Element selection in nested groups',
       },
       {
         type: 'new',
         description: 'Enhanced export capabilities (SVG, PNG, JPG)',
       },
       {
-        type: 'new',
-        description: 'Added feedback system for user suggestions',
+        type: 'fixed',
+        description: 'Memory leak in rendering large SVGs',
       },
       {
         type: 'improved',
-        description: 'UI/UX improvements and bug fixes',
+        description: 'UI/UX improvements',
       },
     ],
   },
@@ -106,7 +106,7 @@ const releases: Release[] = [
 const getTypeColor = (type: Release['type']) => {
   switch (type) {
     case 'major':
-      return 'from-purple-500 to-blue-500';
+      return 'from-teal-400 to-blue-500';
     case 'minor':
       return 'from-blue-500 to-cyan-500';
     case 'patch':
@@ -117,7 +117,7 @@ const getTypeColor = (type: Release['type']) => {
 const getChangeTypeIcon = (type: Release['changes'][0]['type']) => {
   switch (type) {
     case 'new':
-      return '✨';
+      return '⌨️';
     case 'improved':
       return '⚡';
     case 'fixed':
@@ -128,9 +128,9 @@ const getChangeTypeIcon = (type: Release['changes'][0]['type']) => {
 const getChangeTypeColor = (type: Release['changes'][0]['type']) => {
   switch (type) {
     case 'new':
-      return 'text-purple-400';
+      return 'text-teal-400';
     case 'improved':
-      return 'text-blue-400';
+      return 'text-sky-400';
     case 'fixed':
       return 'text-green-400';
   }
@@ -210,6 +210,52 @@ export default function VersionHistory() {
                 </div>
               </motion.div>
             ))}
+          </div>
+
+          <div className="bg-gray-900/50 rounded-lg p-4 mt-12">
+            <h3 className="text-sm font-medium text-gray-400 mb-3">Legend</h3>
+            <div className="grid grid-cols-2 gap-4">
+              <div className="space-y-2">
+                <h4 className="text-xs text-gray-500">Release Types</h4>
+                <div className="space-y-1">
+                  <div className="flex items-center gap-2">
+                    <div
+                      className={`w-3 h-3 rounded-full bg-gradient-to-br from-teal-400 to-blue-500`}
+                    />
+                    <span className="text-sm">Major Release</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <div
+                      className={`w-3 h-3 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500`}
+                    />
+                    <span className="text-sm">Minor Release</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <div
+                      className={`w-3 h-3 rounded-full bg-gradient-to-br from-green-500 to-emerald-500`}
+                    />
+                    <span className="text-sm">Patch Release</span>
+                  </div>
+                </div>
+              </div>
+              <div className="space-y-2">
+                <h4 className="text-xs text-gray-500">Change Types</h4>
+                <div className="space-y-1">
+                  <div className="flex items-center gap-2">
+                    <span className="text-xl">⌨️</span>
+                    <span className="text-sm text-teal-400">New Feature</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="text-xl">⚡</span>
+                    <span className="text-sm text-sky-400">Improvement</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="text-xl">🐛</span>
+                    <span className="text-sm text-green-400">Bug Fix</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </main>
