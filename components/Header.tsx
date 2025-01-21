@@ -211,7 +211,14 @@ const Header = () => {
                   className="font-bold px-6 bg-primary bg-[#29abe2] text-slate-800"
                   onClick={() => setShowDownloadOptions(!showDownloadOptions)}
                 >
-                  Download
+                  Download Beta
+                </Btn>
+                <Btn
+                  variant="default"
+                  className="font-bold px-6 bg-gray-500 text-white"
+                  onClick={() => alert('Feedback button clicked!')}
+                >
+                  Feedback
                 </Btn>
               </div>
             </div>

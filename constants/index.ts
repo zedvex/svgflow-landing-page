@@ -114,27 +114,32 @@ export const FAQs = [
   {
     question: 'How is SVGFlow different from other SVG viewers?',
     answer:
-      'Unlike traditional SVG viewers that feel clunky and outdated, SVGFlow focuses on simplicity and efficiency. Our modern interface makes it effortless to open, inspect and navigate your SVG files.',
+      'It allows you to inspect SVGs code offline',
   },
   {
-    question: 'What are the main features?',
+    question: 'Which operating systems does SVGflow work with?',
     answer:
-      'SVGFlow comes with powerful zoom capabilities, intuitive pan controls, and detailed property inspection tools. You can easily navigate complex SVGs and inspect every element with precision.',
+      'Windows 10 & 11, MAC OS and Linux',
+  },
+  {
+    question: 'Who are we?',
+    answer:
+      'Wem are a 2 person designer-dev team who did not find a decent local SVG editor for Windows and Mac. Were working towards improving this editor so it is quick to both modify and export SVGs for both devs and designer workflows.Every month we improve the tool with your feedback.',
   },
   {
     question: 'Can I use SVGFlow offline?',
     answer:
-      'Yes! SVGFlow works completely offline. You can view and inspect your SVG files anywhere, anytime, without needing an internet connection.',
+      'Yes! SVGFlow works completely offline. You can view and inspect your SVG files without needing an internet connection.',
   },
   {
     question: 'Does SVGFlow support all SVG features?',
     answer:
-      "SVGFlow supports all standard SVG features and specifications. Whether you're working with simple icons or complex illustrations, SVGFlow handles them all seamlessly.",
+      "SVGFlow supports all standard SVG features and specifications. Whether you're working with simple icons or complex illustrations",
   },
   {
     question: 'How does SVGFlow handle large SVG files?',
     answer:
-      'SVGFlow is optimized for performance, handling even the largest SVG files with ease. Our efficient rendering engine ensures smooth zooming and panning regardless of file size.',
+      'SVGFlow is optimized to handle even the largest SVG files with ease.',
   },
 ];
 

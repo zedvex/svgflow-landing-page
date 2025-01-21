@@ -18,12 +18,12 @@ const Features = () => {
           <Tag>Features</Tag>
         </div>
         <h2 className="text-6xl font-medium text-center mt-6 max-w-2xl mx-auto">
-          Where power meets <span className="text-[#29abe2]">simplicity</span>
+        Where desktop SVG viewer meets <span className="text-[#29abe2]">simplicity</span>
         </h2>
         <div className="mt-12 grid grid-cols-1 md:grid-cols-4 lg:grid-cols-3 gap-8">
           <FeatureCard
-            title="Effortless SVG Viewing"
-            description="Open, inspect and navigate your SVG files with powerful zoom, pan and property inspection tools"
+            title="Drag and Drop"
+            description="Quickly open, inspect, and navigate your SVG files with zoom and pan."
             className="md:col-span-2 lg:col-span-1 group"
           >
             <div className="aspect-video flex items-center justify-center">
@@ -47,15 +47,16 @@ const Features = () => {
             </div>
           </FeatureCard>
           <FeatureCard
-            title="SVG Property Inspector"
-            description="Inspect and understand SVG properties with a powerful built-in inspector that shows all attributes and values"
+            title="Inspect code"
+            description="Click parts of your SVG to see and highlight code and understand SVG properties showing all attributes and values."
             className="md:col-span-2 lg:col-span-1 group"
           >
             <div className="aspect-video flex items-center justify-center">
               <p className="text-4xl font-extrabold text-white/20 group-hover:text-white/10 transition duration-500 text-center">
-                We&apos;ve achieved{' '}
+                click and{' '}
                 <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent relative">
-                  <span>incredible</span>
+                  {/*<span>incredible</span>*/}
+                  <span>BOOM!</span>
                   <video
                     src="/assets/gif-incredible.mp4"
                     autoPlay
@@ -65,13 +66,15 @@ const Features = () => {
                     className="absolute bottom-full  left-1/2 -translate-x-1/2 rounded-2xl shadow-xl opacity-0 group-hover:opacity-100 transition duration-500 pointer-events-none"
                   />
                 </span>{' '}
-                growth this year
+                you see
+                <span>{"<code>"}</span>
+
               </p>
             </div>
           </FeatureCard>
           <FeatureCard
-            title="Easy SVG Navigation"
-            description="Effortlessly zoom, pan and select elements with intuitive controls designed for exploring complex SVG files"
+            title="One-click export"
+            description=" Click once to export sizes from 2x2 to 2048x2048 and formats including .jpeg, .png, .pdf, .svg, .psd."
             className="md:col-span-2 md:col-start-2 lg:col-span-1 group"
           >
             <div className="aspect-video flex items-center justify-center">

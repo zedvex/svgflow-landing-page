@@ -99,17 +99,15 @@ const Hero = () => {
         </motion.div> */}
 
         <div className="flex justify-center">
-          <h3 className="tag">✨ we make it easy</h3>
+          <h3 className="tag">✨ 100% free</h3>
         </div>
 
         <h1 className="text-6xl md:text-7xl lg:text-8xl font-medium text-center mt-6">
-          SVG viewing should be simple
+        A simple desktop SVG viewer
         </h1>
 
         <p className="text-center text-xl text-white/50 mt-8 max-w-2xl mx-auto">
-          Tired of clunky SVG viewers? SVGFlow makes it effortless to open,
-          inspect and navigate your SVG files with powerful zoom, pan and
-          property inspection tools.
+          Do you need a simple SVG viewer that installs locally on your computer? Tired of web-based SVG viewers?
         </p>
 
         <div className="flex flex-col lg:flex-row items-center gap-8 mt-12">
@@ -171,12 +169,11 @@ const Hero = () => {
 
           {/* Right side - Text and Download */}
           <div className="flex-1 space-y-6">
-            <h1 className="text-4xl font-bold">SVG viewing should be simple</h1>
+            <h1 className="text-4xl font-bold">SVG viewing should be fast</h1>
 
             <p className="text-lg text-gray-300">
-              SVGFlow makes it effortless to open, inspect and navigate your SVG
-              files with powerful zoom, pan and property inspection tools.
-              That&apos;s why we built SVGFlow - and it&apos;s free to download.
+            SVGFlow makes it effortless to open, inspect, and navigate your SVG files with powerful zoom, pan, and property inspection tools.
+            and it&apos;s free to use.
             </p>
 
             <div className="space-y-4">
