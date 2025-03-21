@@ -165,14 +165,14 @@ export const FOOTER_LINKS = [
 export const DOWNLOADS = {
   windows: {
     version: 'v0.1.5',
-    url: 'https://your-storage-url/SVGFlow-Setup-0.1.5.exe',
+    url: 'https://github.com/zedvex/svgflow-software-dev/releases/tag/v0.1.5',
   },
   mac: {
-    version: 'v0.1.5',
-    url: 'https://your-storage-url/SVGFlow-0.1.5.dmg',
+    version: 'Coming Soon',
+    url: 'https://github.com/zedvex/svgflow-software-dev/releases/tag/v0.1.5',
   },
   linux: {
-    version: 'v0.1.5',
-    url: 'https://your-storage-url/SVGFlow-0.1.5.AppImage',
+    version: 'Coming Soon',
+    url: 'https://github.com/zedvex/svgflow-software-dev/releases/tag/v0.1.5',
   },
 };
