@@ -216,7 +216,7 @@ const Header = () => {
                 <Btn
                   variant="default"
                   className="font-bold px-6 bg-gray-500 text-white"
-                  onClick={() => alert('Feedback button clicked!')}
+                  onClick={() => window.location.href = '/contact'}
                 >
                   Feedback
                 </Btn>

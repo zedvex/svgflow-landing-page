@@ -182,7 +182,7 @@ const Hero = () => {
                   variant="default"
                   className="w-full md:w-auto font-bold px-8 py-3 bg-[#1e864d] hover:bg-[#39be75] text-white"
                   onClick={() => {
-                    /* Add download handler */
+                    window.open('https://github.com/zedvex/svgflow-software-dev/releases/tag/v0.1.5', '_blank');
                   }}
                 >
                   Download SVGFlow
