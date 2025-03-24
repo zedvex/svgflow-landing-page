@@ -30,8 +30,8 @@ const releases: Release[] = [
         description: 'Smooth zoom and pan for better SVG viewing experience',
       },
       {
-        type: 'fixed',
-        description: 'Element selection in nested groups',
+        type: 'new',
+        description: 'Element inspection with color values and dimensions',
       },
       {
         type: 'new',
@@ -49,7 +49,7 @@ const releases: Release[] = [
   },
   {
     version: '0.1.4',
-    date: '2025-12-17',
+    date: '2025-01-10',
     type: 'patch',
     changes: [
       {
@@ -69,14 +69,14 @@ const releases: Release[] = [
         description: 'Improved file handling and error messages',
       },
       {
-        type: 'improved',
+        type: 'fixed',
         description: 'Performance optimizations',
       },
     ],
   },
   {
     version: '0.1.3',
-    date: '2025-11-03',
+    date: '2025-01-03',
     type: 'patch',
     changes: [
       {
